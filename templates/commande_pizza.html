@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page de choix de pizza</title>
+</head>
+<body>
+    <h1>Données de la Base de Données</h1>
+
+    <form action="/commander_pizza" method="get" id="form">
+    
+        <div><label for="croutes">*Croutes :</label>
+        <select name="croutes" id="croutes" required>
+            <option value="">Veuillez choisir une croute</option>
+           {% for i in croutes %}
+           <option value="{{i[0]}}">{{i[1]}}</option>
+           {% endfor %}
+        </select></div>
+
+        
+        <div><label for="sauces">*Sauce :</label>
+        <select name="sauces" id="sauces" required>
+            <option value="">Veuillez choisir une sauce</option>
+            {% for i in sauces %}
+            <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+
+        </select></div>
+
+        <div><label for="garnitures1">*Garniture 1 :</label>
+        <select id="garnitures1" name="garnitures" required/>
+            <option value="0">Veuillez choisir une garniture</option>
+            {% for i in garnitures %}
+            <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select></div> 
+
+        <div><label for="garnitures2">Garniture 2 :</label>
+        <select id="garnitures2" name="garnitures" />
+            <option value="0">Veuillez choisir une garniture</option>
+            {% for i in garnitures %}
+            <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select></div> 
+
+        <div><label for="garnitures3">Garniture 3 :</label>
+        <select id="garnitures3" name="garnitures" />
+            <option value="0">Veuillez choisir une garniture</option>
+            {% for i in garnitures %}
+            <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select></div> 
+
+        <div><label for="garnitures4">Garniture 4 :</label>
+        <select id="garnitures4" name="garnitures" /> 
+            <option value="0">Veuillez choisir une garniture</option>
+            {% for i in garnitures %}
+            <option value="{{i[0]}}">{{i[1]}}</option>
+            {% endfor %}
+        </select></div> 
+
+        <div><label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required></div>
+
+        <div><label for="num">Numéro de téléphone</label>
+        <input type="text" id="num" name="num" required></div>
+
+        <div><label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" required></div>
+
+        <div><input type="submit" value="Soumettre" /></div>
+      </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>listes des commandes en attentes</title>
+</head>
+<body>
+    <h1>Liste des commandes en attentes</h1>
+    <ul>
+        {% for row in data %}
+        <li>{{ row }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Completer une commande</h2>
+    <form action="/completer_commandes" method="get" id="form">
+        <div><label for="commande">numero de commande</label>
+        <input type="text" id="commande" name="commande" required></div>
+
+        <div><input type="submit" value="Soumettre" /></div>
+    </form>
+</body>
+</html>
